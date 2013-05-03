@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 	'artists',
 	'members',
+	'resources',
 )
 
 # A sample logging configuration. The only tangible logging
