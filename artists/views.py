@@ -28,3 +28,6 @@ def login_check(request):
 			'message':"failed ID",
 			})
 		return render_to_response("login.html", ctx)
+
+def list(request):
+    return render_to_response("list.html")
