@@ -22,7 +22,7 @@ def login_check(request):
 				})
 			return render_to_response("login.html", ctx)
 		else:
-			return render_to_response("login.html")
+			return HttpResponse("http://localhost:8000/artists/login/")
 	except:
 		ctx=RequestContext(request, {
 			'message':"failed ID",
