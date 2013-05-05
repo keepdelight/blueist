@@ -1,5 +1,5 @@
 # Create your views here.
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader, RequestContext, Context
 from models import Artist
 from django.core.context_processors import csrf
@@ -22,7 +22,7 @@ def login_check(request):
 				})
 			return render_to_response("login.html", ctx)
 		else:
-			return HttpResponse("http://localhost:8000/artists/login/")
+			return HttpResponseRedirect("/artists/list")
 	except:
 		ctx=RequestContext(request, {
 			'message':"failed ID",

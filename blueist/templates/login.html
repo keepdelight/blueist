@@ -3,22 +3,63 @@
 		<title>
 			Login
 		</title>
+		<style>
+			.left{
+				float:left;
+			}
+
+			.right{
+				float:right;
+			}
+			#signin_box{
+				width:160px;
+				height:52px;
+			}
+
+			#artistId{
+				width:104px;
+				height:26px;
+			}
+
+			#password{
+				width:104px;
+			}
+
+			#submit{
+				width:52px;
+			}
+
+			.content{
+				width:156px;
+				height:104px;
+				margin:150px auto;
+			}
+
+			.wrapper{
+			}
+		</style>
 	</head>
 
 	<body>
-		<div class="wrapper" >
-			<h2>{{message}}</h2>
-			<div id="signin_box">
-				<form method="POST" action="/artists/login/check/">{% csrf_token %}
-					<input type="text" id="artistId" name="artistId" style="width:104px;">
-					<input type="password" id="password" name="password" style="width:104px;">
-					<input type="submit" value="Sign-In">
-				</form>
-			</div>
-			<div id="signup_box">
-				<button type="button">click</button>
-				<button type="button">click</button>
-				<button type="button">click</button>
+		<div class="wrapper">
+			<div class="content">
+				<h2>{{message}}</h2>
+				<div id="signin_box" align="left">
+					<form method="POST" action="/artists/login/check/">{% csrf_token %}
+						<div align="left" class="left" style="width:104px;">
+							<input type="text" id="artistId" name="artistId">
+							<input type="password" id="password" name="password">
+						</div>
+						<div align="right" class="right" style="width:50px;">
+							<input type="submit" id="submit" value="Sign-In">
+						</div>
+					</form>
+				</div>
+				<div id="signup_box">
+					<button type="button">click</button>
+					<button type="button">click</button>
+					<button type="button">click</button>
+				</div>
 			</div>
 		</div>
 	</body>
